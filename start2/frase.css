@@ -27,6 +27,7 @@ p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 2rem;
     font-weight: 700;
+    padding: auto;
 }
 
 main {
@@ -41,7 +42,12 @@ main {
 #testoAlternato {
     border: 2px solid black;
     padding: 40px;
-    position: relative;
+    width: 60%;
+}
+
+.parole {
+    position: absolute;
+    transition: 1s;
 }
 
 #anime-1 {
@@ -51,6 +57,9 @@ main {
     animation-iteration-count: infinite;
     animation-timing-function: cubic-bezier(1, -0.77, 0, 1.52);
     opacity: 0;
+    position: absolute;
+    left: 6px;
+    white-space: nowrap;
 }
 
 #anime-2 {
@@ -61,8 +70,9 @@ main {
     animation-delay: 1.3s;
     animation-timing-function: cubic-bezier(1, -0.77, 0, 1.52);
     opacity: 0;
-    position: relative;
-    left: -205px;
+    position: absolute;
+    left: 6px;
+    white-space: nowrap;
 }
 
 #anime-3 {
@@ -73,19 +83,24 @@ main {
     animation-delay: 2.6s;
     animation-timing-function: cubic-bezier(1, -0.77, 0, 1.52);
     opacity: 0;
-    position: relative;
-    left: -423px;
+    position: absolute;
+    left: 6px;
+    white-space: nowrap;
 }
 
 @keyframes scrol {
     10% {
         opacity: 0;
+        transform: rotatex(-70deg);
     }
 
-    30% {
+    40% {
         opacity: 100;
+        transform: rotatex(0deg);
     }
-    70% {
+
+    60% {
         opacity: 0;
+        transform: rotatex(70deg);
     }
 }
